@@ -38,8 +38,7 @@ public class WordCount
         }
     }
 
-    public static final class Tokenizer
-            implements MapFunction<String, Tuple2<String, Integer>>
+    public static final class Tokenizer implements MapFunction<String, Tuple2<String, Integer>>
     {
         public Tuple2<String, Integer> map(String value)
         {
