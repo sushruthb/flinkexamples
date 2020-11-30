@@ -19,12 +19,12 @@ public class Assignment {
 
         //cab id, cab number plate, cab type, cab driver name, ongoing trip/not, pickup location, destination,passenger count
         // tuple  [June,Category5,Bat,12,1]
-        DataStream<Tuple8<String, String, String, String, String, String, String, Integer>> mapped = data.map(new Splitter());
+        //DataStream<Tuple8<String, String, String, String, String, String, String, Integer>> mapped = data.map(new Splitter());
 
 
     }
 
-    public static class Splitter implements MapFunction<String, Tuple8<String, String, String, Integer, Integer>>
+  /*  public static class Splitter implements MapFunction<String, Tuple8<String, String, String, Integer, Integer>>
     {
         public Tuple8<String, String, String, String, String, String, String, Integer> map(String value)         // 01-06-2018,June,Category5,Bat,12
         {
@@ -32,5 +32,5 @@ public class Assignment {
             // ignore timestamp, we don't need it for any calculations
             return new Tuple8<String, String, String, String, String, String, String, Integer>(words[1], words[2],	words[3], Integer.parseInt(words[4]), 1);
         }                                                            //    June    Category5      Bat                      12
-    }
+    }*/
 }
