@@ -21,7 +21,7 @@ public class WordCountStreaming
 	// make parameters available in the web interface
 	env.getConfig().setGlobalJobParameters(params);
 
-	DataStream<String> text = env.socketTextStream("localhost", 9999); 
+	DataStream<String> text = env.socketTextStream("10.76.99.207", 9999);
 	
 	DataStream<Tuple2<String, Integer>> counts =  text.filter(new FilterFunction<String>() 
 			{
