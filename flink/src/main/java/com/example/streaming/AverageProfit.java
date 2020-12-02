@@ -14,7 +14,6 @@ public class AverageProfit
     {
         // set up the streaming execution environment
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-
         DataStream<String> data = env.readTextFile("/home/dev/flinkexamples/flink/src/main/resources/avg");
 
         // month, product, category, profit, count
